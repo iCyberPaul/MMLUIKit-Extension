@@ -10,6 +10,7 @@
 		58B9098E1F3791B900A6CA8D /* MMLUIKitExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B909841F3791B900A6CA8D /* MMLUIKitExtension.framework */; };
 		58B909931F3791B900A6CA8D /* MMLUIKitExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B909921F3791B900A6CA8D /* MMLUIKitExtensionTests.swift */; };
 		58B909951F3791B900A6CA8D /* MMLUIKitExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 58B909871F3791B900A6CA8D /* MMLUIKitExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58B9099F1F37933900A6CA8D /* UIKit-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B9099E1F37933900A6CA8D /* UIKit-extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		58B9098D1F3791B900A6CA8D /* MMLUIKitExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MMLUIKitExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B909921F3791B900A6CA8D /* MMLUIKitExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMLUIKitExtensionTests.swift; sourceTree = "<group>"; };
 		58B909941F3791B900A6CA8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58B9099E1F37933900A6CA8D /* UIKit-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit-extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				58B909871F3791B900A6CA8D /* MMLUIKitExtension.h */,
+				58B9099E1F37933900A6CA8D /* UIKit-extension.swift */,
 				58B909881F3791B900A6CA8D /* Info.plist */,
 			);
 			path = MMLUIKitExtension;
@@ -148,6 +151,8 @@
 				TargetAttributes = {
 					58B909831F3791B900A6CA8D = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 					};
 					58B9098C1F3791B900A6CA8D = {
 						CreatedOnToolsVersion = 9.0;
@@ -194,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58B9099F1F37933900A6CA8D /* UIKit-extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +338,10 @@
 		58B909991F3791B900A6CA8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PQY9C9Z38B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -340,10 +349,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MMLUIKitExtension/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mauley-Media.MMLUIKitExtension";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -352,7 +364,10 @@
 		58B9099A1F3791B900A6CA8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = PQY9C9Z38B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -360,9 +375,11 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MMLUIKitExtension/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mauley-Media.MMLUIKitExtension";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -372,6 +389,7 @@
 		58B9099C1F3791B900A6CA8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = PQY9C9Z38B;
 				INFOPLIST_FILE = MMLUIKitExtensionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -385,6 +403,7 @@
 		58B9099D1F3791B900A6CA8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = PQY9C9Z38B;
 				INFOPLIST_FILE = MMLUIKitExtensionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
